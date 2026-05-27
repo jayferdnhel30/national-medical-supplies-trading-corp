@@ -3,6 +3,16 @@ import SendIcon from "@mui/icons-material/Send";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 
+import banner2 from "../../../../shared/styles/images/banner2.png";
+import banner3 from "../../../../shared/styles/images/banner3.png";
+import medicalDisposable from "../../../../shared/styles/images/medical-disposable.png";
+import medicalDevices from "../../../../shared/styles/images/medical-devices.png";
+import hospitalSolutions from "../../../../shared/styles/images/hospital-solutions.png";
+import requestQuotation from "../../../../shared/styles/images/Request-Quotation-Thumbnail.png";
+import chooseRightProducts from "../../../../shared/styles/images/Choose-Right-Products.png";
+import reliableOrderFulfillment from "../../../../shared/styles/images/Reliable-Order-Fulfillment.png";
+import supportTeams from "../../../../shared/styles/images/Support-Teams.png";
+
 const themeGradient = "linear-gradient(135deg, #0F4C81 0%, #1976d2 100%)";
 const themeWhite = "#fff";
 const accentYellow = "#ffb805";
@@ -42,7 +52,7 @@ export default function HomePage() {
 
         <div className="slider">
           <img
-            src="src\shared\styles\images\banner2.png"
+            src={banner2}
             alt="Medical supplies banner"
             className="banner-image"
             style={{ width: "100%" }}
@@ -79,7 +89,7 @@ export default function HomePage() {
 
           <div className="row gtr-50">
             <FeatureCard
-              image="src\shared\styles\images\medical-disposable.png"
+              image={medicalDisposable}
               category="Medical Disposables"
               title="Essential Clinical Supplies"
               subtitle="Daily-use products for patient care"
@@ -87,7 +97,7 @@ export default function HomePage() {
             />
 
             <FeatureCard
-              image="src\shared\styles\images\medical-devices.png"
+              image={medicalDevices}
               category="Medical Devices"
               title="Healthcare Equipment"
               subtitle="Practical tools for care delivery"
@@ -95,7 +105,7 @@ export default function HomePage() {
             />
 
             <FeatureCard
-              image="src\shared\styles\images\hospital-solutions.png"
+              image={hospitalSolutions}
               category="Hospital Solutions"
               title="Facility Support Products"
               subtitle="Supplies for modern healthcare spaces"
@@ -112,7 +122,7 @@ export default function HomePage() {
           backgroundImage: `linear-gradient(
             rgba(15, 76, 129, 0.82),
             rgba(25, 118, 210, 0.49)
-          ), url('src/shared/styles/images/banner3.png')`,
+          ), url(${banner3})`,
           color: themeWhite,
         }}
         data-stellar-background-ratio="0.5"
@@ -143,7 +153,7 @@ export default function HomePage() {
             <section className="col-6 col-12-narrower">
               <div className="box post">
                 <a href="#" className="image left">
-                  <PostImage src="src/shared/styles/images/Request-Quotation-Thumbnail.png" />
+                  <PostImage src={requestQuotation} />
                 </a>
                 <div className="inner">
                   <h3>Request a quotation</h3>
@@ -159,7 +169,7 @@ export default function HomePage() {
             <section className="col-6 col-12-narrower">
               <div className="box post right">
                 <a href="#" className="image left">
-                  <PostImage src="src/shared/styles/images/Choose-Right-Products.png" />
+                  <PostImage src={chooseRightProducts} />
                 </a>
                 <div className="inner">
                   <h3>Choose the right products</h3>
@@ -177,7 +187,7 @@ export default function HomePage() {
             <section className="col-6 col-12-narrower">
               <div className="box post">
                 <a href="#" className="image left">
-                  <PostImage src="src/shared/styles/images/Reliable-Order-Fulfillment.png" />
+                  <PostImage src={reliableOrderFulfillment} />
                 </a>
                 <div className="inner">
                   <h3>Reliable order fulfillment</h3>
@@ -193,7 +203,7 @@ export default function HomePage() {
             <section className="col-6 col-12-narrower">
               <div className="box post">
                 <a href="#" className="image left">
-                  <PostImage src="src/shared/styles/images/Support-Teams.png" />
+                  <PostImage src={supportTeams} />
                 </a>
                 <div className="inner">
                   <h3>Support for healthcare teams</h3>

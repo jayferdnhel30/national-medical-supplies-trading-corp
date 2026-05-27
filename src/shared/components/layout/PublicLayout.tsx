@@ -14,6 +14,7 @@ import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import EmailIcon from "@mui/icons-material/Email";
+import logo from "../../../shared/styles/images/logo.png";
 
 import "../../../shared/styles/main.css";
 import "../../../shared/styles/main_less.css";
@@ -96,7 +97,7 @@ export default function PublicLayout() {
                 }}
               >
                 <img
-                  src="src/shared/styles/images/logo.png"
+                  src={logo}
                   alt="National Medical Supplies and Trading Corporation"
                   style={{
                     width: "56px",

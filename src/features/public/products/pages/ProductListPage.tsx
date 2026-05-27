@@ -10,7 +10,7 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-
+const PRODUCT_IMAGE_BASE = "/src/shared/styles/images";
 const products = [
   {
     id: 1,
@@ -18,7 +18,7 @@ const products = [
     category: "Medical Disposables",
     description:
       "Durable disposable gloves suitable for clinics, laboratories, and patient care use.",
-    image: "/src/shared/styles/images/medical-disposable.png",
+    image: `${PRODUCT_IMAGE_BASE}/medical-disposable.png`,
     status: "Available",
   },
   {
@@ -27,7 +27,7 @@ const products = [
     category: "Medical Devices",
     description:
       "Easy-to-use monitoring device for routine blood pressure checks and patient assessment.",
-    image: "/src/shared/styles/images/medical-devices.png",
+    image: `${PRODUCT_IMAGE_BASE}/medical-devices.png`,
     status: "Available",
   },
   {
@@ -36,7 +36,7 @@ const products = [
     category: "Hospital Solutions",
     description:
       "Essential supplies for patient rooms, treatment areas, and healthcare operations.",
-    image: "/src/shared/styles/images/hospital-solutions.png",
+    image: `${PRODUCT_IMAGE_BASE}/hospital-solutions.png`,
     status: "For Quotation",
   },
 ];
