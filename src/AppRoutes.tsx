@@ -7,6 +7,7 @@ import CartPage from "./features/public/cart/pages/CartPage";
 import CheckoutPage from "./features/public/checkout/pages/CheckoutPage";
 import AboutPage from "./features/public/pages/about/AboutPage";
 import FeedbackPage from "./features/public/pages/feedback/FeedbackPage";
+import ContactPage from "./features/public/pages/contact/ContactPage";
 import LoginPage from "./features/public/auth/pages/LoginPage";
 import RegisterPage from "./features/public/auth/pages/RegisterPage";
 import AdminRoutes from "./AdminRoutes";
@@ -20,7 +21,9 @@ export default function AppRoutes() {
         <Route element={<PublicLayout />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/feedback" element={<FeedbackPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="/about" element={<AboutPage />} />
+
           <Route path="/products" element={<ProductListPage />} />
           <Route path="/products/:id" element={<ProductDetailPage />} />
           <Route

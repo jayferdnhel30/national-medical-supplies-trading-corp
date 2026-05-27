@@ -1,4 +1,4 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, NavLink } from "react-router-dom";
 import { useEffect, useState, type CSSProperties } from "react";
 import { useAuth } from "../../hooks/useAuth";
 
@@ -24,6 +24,7 @@ export default function PublicLayout() {
 
   const themeGradient = "linear-gradient(135deg, #0F4C81 0%, #1976d2 100%)";
   const themeWhite = "#fff";
+  const accentYellow = "#ffb805";
 
   const [isMobile, setIsMobile] = useState(
     typeof window !== "undefined" && window.innerWidth <= 840,
@@ -54,6 +55,12 @@ export default function PublicLayout() {
     fontWeight: 700,
     textDecoration: "none",
   };
+
+  const getNavLinkStyle = ({ isActive }: { isActive: boolean }) => ({
+    ...headerLinkStyle,
+    borderBottom: isActive ? `3px solid ${accentYellow}` : "none",
+    paddingBottom: "6px",
+  });
 
   const closeMenu = () => setMenuOpen(false);
 
@@ -250,28 +257,34 @@ export default function PublicLayout() {
           {!isMobile && (
             <nav id="nav">
               <ul>
-                <li className="current">
-                  <Link to="/" style={headerLinkStyle}>
+                <li>
+                  <NavLink to="/" end style={getNavLinkStyle}>
                     HOME
-                  </Link>
+                  </NavLink>
                 </li>
 
                 <li>
-                  <Link to="/about" style={headerLinkStyle}>
+                  <NavLink to="/about" style={getNavLinkStyle}>
                     ABOUT
-                  </Link>
+                  </NavLink>
                 </li>
 
                 <li>
-                  <Link to="/products" style={headerLinkStyle}>
+                  <NavLink to="/products" style={getNavLinkStyle}>
                     PRODUCTS
-                  </Link>
+                  </NavLink>
                 </li>
 
                 <li>
-                  <Link to="/feedback" style={headerLinkStyle}>
+                  <NavLink to="/feedback" style={getNavLinkStyle}>
                     FEEDBACK
-                  </Link>
+                  </NavLink>
+                </li>
+
+                <li>
+                  <NavLink to="/contact" style={getNavLinkStyle}>
+                    CONTACT
+                  </NavLink>
                 </li>
               </ul>
             </nav>
@@ -326,6 +339,16 @@ export default function PublicLayout() {
                 onClick={closeMenu}
               >
                 <ListItemText primary="FEEDBACK" />
+              </ListItemButton>
+            </ListItem>
+
+            <ListItem disablePadding sx={borderTopStyle}>
+              <ListItemButton
+                component={Link}
+                to="/contact"
+                onClick={closeMenu}
+              >
+                <ListItemText primary="CONTACT" />
               </ListItemButton>
             </ListItem>
 
@@ -529,6 +552,18 @@ export default function PublicLayout() {
                     }}
                   >
                     Feedback
+                  </Link>
+                </ListItem>
+
+                <ListItem disableGutters>
+                  <Link
+                    to="/contact"
+                    style={{
+                      color: themeWhite,
+                      textDecoration: "none",
+                    }}
+                  >
+                    Contact
                   </Link>
                 </ListItem>
               </List>
