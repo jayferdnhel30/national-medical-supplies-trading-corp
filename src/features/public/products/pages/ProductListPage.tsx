@@ -10,7 +10,7 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-const PRODUCT_IMAGE_BASE = "public/images";
+const PRODUCT_IMAGE_BASE = "/images";
 const products = [
   {
     id: 1,
