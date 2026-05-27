@@ -123,10 +123,10 @@ export default function PublicLayout() {
                 >
                   <span
                     style={{
-                      fontSize: "1.50rem",
+                      fontSize: "1.3rem",
                       fontWeight: 800,
                       color: themeWhite,
-                      letterSpacing: "1px",
+                      letterSpacing: "0.3px",
                     }}
                   >
                     NATIONAL MEDICAL
@@ -134,10 +134,10 @@ export default function PublicLayout() {
 
                   <span
                     style={{
-                      fontSize: "0.9rem",
+                      fontSize: "0.8rem",
                       fontWeight: 700,
                       color: "rgba(255,255,255,.85)",
-                      letterSpacing: "0.9px",
+                      letterSpacing: "0.5px",
                     }}
                   >
                     SUPPLIES AND TRADING CORP.
