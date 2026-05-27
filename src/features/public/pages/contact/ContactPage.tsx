@@ -37,10 +37,6 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    // In a real app, send to backend here.
-    // eslint-disable-next-line no-console
-    console.log("Contact submitted:", formData);
-
     setSubmitted(true);
     setTimeout(() => {
       setFormData({ name: "", email: "", subject: "", message: "" });

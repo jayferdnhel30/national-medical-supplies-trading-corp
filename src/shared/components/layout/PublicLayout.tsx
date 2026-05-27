@@ -90,7 +90,7 @@ export default function PublicLayout() {
             }}
           >
             {/* LOGO */}
-            <h1 style={{ margin: "20px 0 20px 20px" }}>
+            <h1 style={{ margin: "5px 0 20px 20px" }}>
               <Link
                 to="/"
                 id="logo"
@@ -107,8 +107,8 @@ export default function PublicLayout() {
                   src={logo}
                   alt="National Medical Supplies and Trading Corporation"
                   style={{
-                    width: "56px",
-                    height: "56px",
+                    width: "65px",
+                    height: "65px",
                     objectFit: "contain",
                     flexShrink: 0,
                   }}
@@ -123,10 +123,10 @@ export default function PublicLayout() {
                 >
                   <span
                     style={{
-                      fontSize: "1.25rem",
+                      fontSize: "1.50rem",
                       fontWeight: 800,
                       color: themeWhite,
-                      letterSpacing: "0.5px",
+                      letterSpacing: "1px",
                     }}
                   >
                     NATIONAL MEDICAL
@@ -134,10 +134,10 @@ export default function PublicLayout() {
 
                   <span
                     style={{
-                      fontSize: "0.8rem",
+                      fontSize: "0.9rem",
                       fontWeight: 700,
                       color: "rgba(255,255,255,.85)",
-                      letterSpacing: "0.6px",
+                      letterSpacing: "0.9px",
                     }}
                   >
                     SUPPLIES AND TRADING CORP.
