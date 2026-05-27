@@ -1,0 +1,246 @@
+src/
+├── features/
+│   ├── public/
+│   │   ├── auth/
+│   │   │   ├── components/
+│   │   │   │   ├── LoginForm.tsx
+│   │   │   │   ├── RegisterForm.tsx
+│   │   │   │   └── PasswordReset.tsx
+│   │   │   ├── pages/
+│   │   │   │   ├── LoginPage.tsx
+│   │   │   │   └── RegisterPage.tsx
+│   │   │   ├── hooks/
+│   │   │   ├── services/
+│   │   │   ├── types/
+│   │   │   └── AuthContext.tsx
+│   │   │
+│   │   ├── products/
+│   │   │   ├── components/
+│   │   │   │   ├── ProductCard.tsx
+│   │   │   │   ├── ProductFilter.tsx
+│   │   │   │   ├── ProductGallery.tsx
+│   │   │   │   └── ProductReviews.tsx
+│   │   │   ├── pages/
+│   │   │   │   ├── ProductListPage.tsx
+│   │   │   │   └── ProductDetailPage.tsx
+│   │   │   ├── services/
+│   │   │   └── types/
+│   │   │
+│   │   ├── cart/
+│   │   │   ├── components/
+│   │   │   │   ├── CartSummary.tsx
+│   │   │   │   ├── CartItem.tsx
+│   │   │   │   └── CartEmpty.tsx
+│   │   │   ├── pages/
+│   │   │   │   └── CartPage.tsx
+│   │   │   ├── services/
+│   │   │   ├── hooks/
+│   │   │   │   └── useCart.ts
+│   │   │   ├── types/
+│   │   │   └── CartContext.tsx
+│   │   │
+│   │   ├── checkout/
+│   │   │   ├── components/
+│   │   │   │   ├── ShippingForm.tsx
+│   │   │   │   ├── BillingForm.tsx
+│   │   │   │   ├── OrderReview.tsx
+│   │   │   │   └── PaymentForm.tsx
+│   │   │   ├── pages/
+│   │   │   │   ├── CheckoutPage.tsx
+│   │   │   │   └── OrderConfirmation.tsx
+│   │   │   ├── services/
+│   │   │   └── types/
+│   │   │
+│   │   ├── pages/
+│   │   │   ├── home/
+│   │   │   │   ├── HomePage.tsx
+│   │   │   │   ├── Banner.tsx
+│   │   │   │   ├── FeaturedProducts.tsx
+│   │   │   │   └── Categories.tsx
+│   │   │   ├── about/
+│   │   │   │   └── AboutPage.tsx
+│   │   │   ├── contact/
+│   │   │   │   └── ContactPage.tsx
+│   │   │   └── NotFound.tsx
+│   │   │
+│   │   └── orders/
+│   │       ├── components/
+│   │       │   ├── OrderHistory.tsx
+│   │       │   └── OrderDetails.tsx
+│   │       ├── pages/
+│   │       │   └── OrdersPage.tsx
+│   │       ├── services/
+│   │       └── types/
+│   │
+│   └── admin/
+│       ├── dashboard/
+│       │   ├── components/
+│       │   │   ├── StatsCard.tsx
+│       │   │   ├── SalesChart.tsx
+│       │   │   └── RecentOrders.tsx
+│       │   ├── pages/
+│       │   │   └── DashboardPage.tsx
+│       │   └── services/
+│       │
+│       ├── products/
+│       │   ├── components/
+│       │   │   ├── ProductTable.tsx
+│       │   │   ├── ProductForm.tsx
+│       │   │   ├── BulkUpload.tsx
+│       │   │   └── ProductImages.tsx
+│       │   ├── pages/
+│       │   │   ├── ProductsListPage.tsx
+│       │   │   ├── AddProductPage.tsx
+│       │   │   └── EditProductPage.tsx
+│       │   ├── services/
+│       │   └── types/
+│       │
+│       ├── orders/
+│       │   ├── components/
+│       │   │   ├── OrderTable.tsx
+│       │   │   ├── OrderStatus.tsx
+│       │   │   └── OrderDetails.tsx
+│       │   ├── pages/
+│       │   │   ├── OrdersPage.tsx
+│       │   │   └── OrderDetailPage.tsx
+│       │   ├── services/
+│       │   └── types/
+│       │
+│       ├── customers/
+│       │   ├── components/
+│       │   │   ├── CustomerTable.tsx
+│       │   │   └── CustomerDetail.tsx
+│       │   ├── pages/
+│       │   │   ├── CustomersPage.tsx
+│       │   │   └── CustomerDetailPage.tsx
+│       │   ├── services/
+│       │   └── types/
+│       │
+│       ├── categories/
+│       │   ├── components/
+│       │   ├── pages/
+│       │   ├── services/
+│       │   └── types/
+│       │
+│       ├── inventory/
+│       │   ├── components/
+│       │   ├── pages/
+│       │   ├── services/
+│       │   └── types/
+│       │
+│       ├── settings/
+│       │   ├── components/
+│       │   │   ├── GeneralSettings.tsx
+│       │   │   ├── PaymentSettings.tsx
+│       │   │   └── ShippingSettings.tsx
+│       │   ├── pages/
+│       │   │   └── SettingsPage.tsx
+│       │   └── services/
+│       │
+│       ├── auth/
+│       │   ├── components/
+│       │   │   └── AdminLoginForm.tsx
+│       │   ├── pages/
+│       │   │   └── AdminLoginPage.tsx
+│       │   ├── services/
+│       │   └── types/
+│       │
+│       ├── layout/
+│       │   ├── AdminLayout.tsx
+│       │   ├── Sidebar.tsx
+│       │   └── AdminHeader.tsx
+│       │
+│       └── AdminApp.tsx
+│
+├── shared/
+│   ├── components/
+│   │   ├── layout/
+│   │   │   ├── Header.tsx
+│   │   │   ├── Footer.tsx
+│   │   │   ├── Navigation.tsx
+│   │   │   ├── Breadcrumb.tsx
+│   │   │   └── MobileMenu.tsx
+│   │   ├── ui/
+│   │   │   ├── Button.tsx
+│   │   │   ├── Input.tsx
+│   │   │   ├── Modal.tsx
+│   │   │   ├── Toast.tsx
+│   │   │   ├── Loader.tsx
+│   │   │   ├── Pagination.tsx
+│   │   │   └── Badge.tsx
+│   │   └── common/
+│   │       ├── LoadingSpinner.tsx
+│   │       ├── ErrorBoundary.tsx
+│   │       └── ProtectedRoute.tsx
+│   │
+│   ├── hooks/
+│   │   ├── useAuth.ts
+│   │   ├── useFetch.ts
+│   │   ├── useLocalStorage.ts
+│   │   ├── usePagination.ts
+│   │   └── useDebounce.ts
+│   │
+│   ├── services/
+│   │   ├── api.ts (axios/fetch config)
+│   │   ├── authService.ts
+│   │   ├── productService.ts
+│   │   ├── orderService.ts
+│   │   └── paymentService.ts
+│   │
+│   ├── types/
+│   │   ├── common.ts
+│   │   ├── product.ts
+│   │   ├── order.ts
+│   │   ├── user.ts
+│   │   └── cart.ts
+│   │
+│   ├── utils/
+│   │   ├── formatters.ts (price, date, etc.)
+│   │   ├── validators.ts
+│   │   ├── storage.ts
+│   │   ├── api-helpers.ts
+│   │   └── constants.ts
+│   │
+│   ├── context/
+│   │   ├── AuthContext.tsx
+│   │   ├── NotificationContext.tsx
+│   │   └── ThemeContext.tsx
+│   │
+│   └── styles/
+│       ├── variables.css
+│       └── globals.css
+│
+├── middleware/
+│   ├── authMiddleware.ts
+│   └── errorHandler.ts
+│
+├── App.tsx (routes setup)
+├── AppRoutes.tsx
+├── AdminRoutes.tsx
+└── main.tsx
+
+--Routing Example (in App.tsx):
+<BrowserRouter>
+  <Routes>
+    {/* Public Routes */}
+    <Route element={<PublicLayout />}>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/products" element={<ProductListPage />} />
+      <Route path="/products/:id" element={<ProductDetailPage />} />
+      <Route path="/cart" element={<CartPage />} />
+      <Route path="/checkout" element={<CheckoutPage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/register" element={<RegisterPage />} />
+    </Route>
+
+    {/* Admin Routes */}
+    <Route element={<ProtectedAdminRoute />}>
+      <Route path="/admin" element={<AdminLayout />}>
+        <Route index element={<DashboardPage />} />
+        <Route path="products" element={<ProductsListPage />} />
+        <Route path="orders" element={<OrdersPage />} />
+        {/* ... more admin routes */}
+      </Route>
+    </Route>
+  </Routes>
+</BrowserRouter>
