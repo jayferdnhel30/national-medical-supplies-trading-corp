@@ -1,4 +1,5 @@
 import { Link, useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -12,68 +13,21 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import EmailIcon from "@mui/icons-material/Email";
 import Inventory2Icon from "@mui/icons-material/Inventory2";
 import VerifiedIcon from "@mui/icons-material/Verified";
+import { products } from "../services/productsData";
 
-const PRODUCT_IMAGE_BASE = "/images";
 const accentYellow = "#ffb805";
 const themeGradient = "linear-gradient(135deg, #0F4C81 0%, #1976d2 100%)";
-
-const products = [
-  {
-    id: 1,
-    name: "Medical Disposable Gloves",
-    category: "Medical Disposables",
-    status: "Available",
-    image: `${PRODUCT_IMAGE_BASE}/medical-disposable.png`,
-    summary:
-      "Durable disposable gloves suitable for clinics, laboratories, and patient care use.",
-    description:
-      "Designed for everyday clinical protection, these disposable gloves help support safe handling, cleanliness, and infection-control routines across healthcare environments.",
-    features: [
-      "Suitable for clinics, hospitals, and laboratories",
-      "Comfortable fit for routine medical tasks",
-      "Ideal for patient care, cleaning, and handling supplies",
-      "Available for bulk quotation and facility orders",
-    ],
-  },
-  {
-    id: 2,
-    name: "Digital Blood Pressure Monitor",
-    category: "Medical Devices",
-    status: "Available",
-    image: `${PRODUCT_IMAGE_BASE}/medical-devices.png`,
-    summary:
-      "Easy-to-use monitoring device for routine blood pressure checks and patient assessment.",
-    description:
-      "A practical digital blood pressure monitor for healthcare teams that need dependable, easy-to-read measurements during routine checks and patient monitoring.",
-    features: [
-      "Simple operation for daily use",
-      "Clear digital display for quick reading",
-      "Useful for clinics, patient rooms, and health stations",
-      "Supports routine blood pressure assessment",
-    ],
-  },
-  {
-    id: 3,
-    name: "Hospital Support Supplies",
-    category: "Hospital Solutions",
-    status: "For Quotation",
-    image: `${PRODUCT_IMAGE_BASE}/hospital-solutions.png`,
-    summary:
-      "Essential supplies for patient rooms, treatment areas, and healthcare operations.",
-    description:
-      "A flexible range of hospital support products for treatment spaces, patient rooms, and daily healthcare operations.",
-    features: [
-      "Helpful for patient rooms and treatment areas",
-      "Supports organized healthcare facility operations",
-      "Available depending on facility requirements",
-      "Recommended for quotation-based purchasing",
-    ],
-  },
-];
 
 export default function ProductDetailPage() {
   const { id } = useParams();
   const product = products.find((item) => String(item.id) === id);
+
+  useEffect(() => {
+    // scroll to top and focus the product heading for accessibility
+    window.scrollTo({ top: 0, behavior: "auto" });
+    const el = document.getElementById("product-top");
+    if (el instanceof HTMLElement) el.focus();
+  }, [product?.id]);
 
   if (!product) {
     return (
@@ -179,6 +133,8 @@ export default function ProductDetailPage() {
           </Button>
 
           <Typography
+            id="product-top"
+            tabIndex={-1}
             component="h1"
             sx={{
               color: "#fff",
@@ -200,7 +156,11 @@ export default function ProductDetailPage() {
             }}
           >
             <Chip
-              label={product.category}
+              label={
+                Array.isArray(product.category)
+                  ? product.category.join(" / ")
+                  : product.category
+              }
               sx={{
                 background: "#fff5d6",
                 color: "#0f4c81",
